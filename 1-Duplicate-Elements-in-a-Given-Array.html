@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Duplicate Elements</title>
+</head>
+<body>
+	
+	<center>
+		<h1 style="color:blue;">How to Find Duplicate Elements in Array</h1>
+		<h2>Array: 5, 3, 6, 3, 5, 2, 6, 10, 12, 6, 3</h2>
+		<h3>Result: (5) [3, 5, 6, 6, 3]</h3>
+		<h4 style="color:red;">Note: Go to Console to view this result</h4>
+	</center>
+	
+	
+	<script>
+	  const arrNumber = [5, 3, 6, 3, 5, 2, 6, 10, 12, 6, 3];
+	  const duplicateNumber = arrNumber.filter(
+		(jodu, modhu, kodhu) => kodhu.indexOf(jodu) !== modhu
+	  );
+
+	  console.log(duplicateNumber);
+	</script>
+
+	
+</body>
+</html>
