@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Defference Between == / ===</title>
+  </head>
+  <body>
+    <center>
+      <h1 style="color: blue">Difference Between == / ===</h1>
+      <h3 id="a"></h3>
+      <h3 id="b"></h3>
+      <h3 id="result1"></h3>
+      <h3 id="result2"></h3>
+      <h4 style="color: red">Note: Go to Console to view this result</h4>
+    </center>
+
+    <script>
+      var a = 50;
+      var b = "50";
+      result1 = a == b;
+      result2 = a === b;
+
+      document.getElementById("a").innerHTML = "var a: " + a;
+      document.getElementById("b").innerHTML = "var b: " + '"' + b + '"';
+      document.getElementById("result1").innerHTML =
+        "Result-1 (a == b): " + result1;
+      document.getElementById("result2").innerHTML =
+        "Result-2 (a === b): " + result2;
+
+      console.log(result1);
+      console.log(result2);
+    </script>
+  </body>
+</html>
