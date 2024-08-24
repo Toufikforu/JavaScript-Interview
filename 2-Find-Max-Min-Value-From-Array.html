@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Max and Min Value from Array</title>
+  </head>
+  <body>
+    <center>
+      <h1 style="color: blue">
+        How to Find Max and Min value in a given Array
+      </h1>
+      <h2 id="arrValue"></h2>
+      <h3 id="resultValue"></h3>
+      <h4 style="color: red">Note: Go to Console to view this result</h4>
+    </center>
+
+    <script>
+      const arrNumber = [101, 202, 49303, 404, 505, 606, 1500, 30, 1665];
+      const findMaxValueByFunction = (tou) => {
+        return tou.reduce(function (pre, cur) {
+          return pre > cur ? pre : cur;
+        });
+      };
+
+      document.getElementById("arrValue").innerHTML =
+        "Array Value: <span style='color:green;'>" +
+        arrNumber.join(", ") +
+        "</span>";
+
+      document.getElementById("resultValue").innerHTML =
+        "Result: " + findMaxValueByFunction(arrNumber);
+
+      console.log(findMaxValueByFunction(arrNumber));
+    </script>
+  </body>
+</html>
