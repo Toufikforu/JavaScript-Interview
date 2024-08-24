@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2nd Largest Value</title>
+  </head>
+  <body>
+    <center>
+      <h1 style="color: purple">How to Find 2nd Largest Number From Array</h1>
+      <h3 id="arrayNumber"></h3>
+      <h3 id="result"></h3>
+      <h4 style="color: red">Note: Go to Console to view this result</h4>
+    </center>
+
+    <script>
+      const arrNumber = [60, 90, 20, 30, 10];
+
+      const secondLargestValue = (tou) => {
+        const arrCopy = [...tou]; // Create a copy of the array
+        const mainLargestValue = Math.max(...arrCopy);
+        const index = arrCopy.indexOf(mainLargestValue); // Find Largest Value Index
+        arrCopy.splice(index, 1); // Remove Largest value from the copied list
+
+        // Find Second Largest Value
+        const secondLargestNumber = Math.max(...arrCopy);
+        return secondLargestNumber;
+      };
+
+      document.getElementById("arrayNumber").innerHTML =
+        "Array Value: " + arrNumber;
+      document.getElementById("result").innerHTML =
+        "Result: " + secondLargestValue(arrNumber);
+
+      console.log(secondLargestValue(arrNumber));
+    </script>
+  </body>
+</html>
