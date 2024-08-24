@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find() and Filter() Difference | JavaScript</title>
+  </head>
+  <body>
+    <center>
+      <h1 style="color: purple">Difference between Filter() and Find()</h1>
+      <h3 id="result1"></h3>
+      <h3 id="result2"></h3>
+      <h4 style="color: red">Note: Go to Console to view this result</h4>
+    </center>
+
+    <script>
+      const peopleArr = [
+        { name: "Nafiz", age: 23 },
+        { name: "Rasid", age: 26 },
+        { name: "Tumpa", age: 20 },
+        { name: "Wunn", age: 24 },
+        { name: "Toufik", age: 29 },
+      ];
+
+      const filterPeople = peopleArr.filter((tou) => {
+        return tou.age > 23;
+      });
+      const findPeople = peopleArr.find((tou) => {
+        return tou.age > 23;
+      });
+
+      console.log(filterPeople);
+      console.log(findPeople);
+    </script>
+  </body>
+</html>
