@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Even or Odd Number | JavaScript</title>
+  </head>
+  <body>
+    <center>
+      <h1 style="color: purple">Find Even or Odd Number from Array</h1>
+      <h3 id="result1"></h3>
+      <h3 id="result2"></h3>
+      <h4 style="color: red">Note: Go to Console to view this result</h4>
+    </center>
+
+    <script>
+      const arrList = [5, 15, 20, 25, 30, 35, 40];
+
+      const evenNumber = arrList.filter((elements) => {
+        return elements % 2 === 0;
+      });
+      const oDDNumber = arrList.filter((elements) => {
+        return elements % 2 == !0;
+      });
+
+      document.getElementById("result1").innerHTML =
+        "Array List: " + arrList.join(", ");
+      document.getElementById("result2").innerHTML = `Result:
+        Even Number is: 
+        ${evenNumber} and
+        Odd Number is: 
+        ${oDDNumber}`;
+
+      console.log("Even number is: ", evenNumber);
+      console.log("Odd number is: ", oDDNumber);
+    </script>
+  </body>
+</html>
