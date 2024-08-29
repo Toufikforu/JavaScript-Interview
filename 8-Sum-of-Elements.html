@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1 style="color: purple">Find Sum of Elements from Array</h1>
+      <h3 id="result1"></h3>
+      <h3 id="result2"></h3>
+      <h4 style="color: red">Note: Go to Console to view this result</h4>
+    </center>
+
+    <script>
+      const arrNumber = [10, 20, 30, 40, 50];
+
+      const subofElements = (arr) => {
+        return arr.reduce((past, current) => {
+          return past + current;
+        });
+      };
+
+      document.getElementById("result1").innerHTML = "Array List: " + arrNumber;
+      document.getElementById("result2").innerHTML =
+        "Result: " + subofElements(arrNumber);
+      console.log(subofElements(arrNumber));
+    </script>
+  </body>
+</html>
