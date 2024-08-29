@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Factorial of a Given Number | Javascript</title>
+  </head>
+  <body>
+    <center>
+      <h1 style="color: purple">
+        Find Factorial of a Given Number | Javascript
+      </h1>
+      <h3 id="result1"></h3>
+      <h3 id="result2"></h3>
+      <h4 style="color: red">Note: Go to Console to view this result</h4>
+    </center>
+
+    <script>
+      const userInputNumber = prompt("Enter Your number");
+
+      var Factorial = 1;
+      if (userInputNumber < 0) {
+        const notFactorial = console.log(
+          `${userInputNumber} is not a Factorial Number.`
+        );
+      } else {
+        for (let i = 1; i <= userInputNumber; i++) {
+          Factorial = Factorial * i;
+        }
+        const FactorialNum = console.log(
+          `Factorial of ${userInputNumber} is ${Factorial}`
+        );
+      }
+
+      document.getElementById("result1").innerHTML =
+        "Input Number is: " + userInputNumber;
+    </script>
+  </body>
+</html>
