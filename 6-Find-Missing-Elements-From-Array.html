@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Missing Elements From Array</title>
+  </head>
+  <body>
+    <center>
+      <h1 style="color: purple">Find Missing Elements From Array</h1>
+      <h3 id="result1"></h3>
+      <h3 id="result2"></h3>
+      <h4 style="color: red">Note: Go to Console to view this result</h4>
+    </center>
+
+    <script>
+      const arrNumber = [1, 2, 3, 5, 7, 8, 10];
+
+      const missingNumList = [];
+
+      const missingValue = (arr) => {
+        const minNumber = Math.min(...arr);
+        const maxNumber = Math.max(...arr);
+
+        for (let i = minNumber; i < maxNumber; i++) {
+          if (arr.indexOf(i) < 0) {
+            missingNumList.push(i);
+          }
+        }
+        return missingNumList;
+      };
+
+      document.getElementById("result1").innerHTML = "Array List: " + arrNumber;
+      document.getElementById("result2").innerHTML =
+        "Result: " + missingValue(arrNumber);
+
+      console.log(missingValue(arrNumber));
+    </script>
+  </body>
+</html>
