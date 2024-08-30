@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Vowels From Sring | Javascript</title>
+  </head>
+  <body>
+    <center>
+      <h1 style="color: purple">Find Vowels From Sring | Javascript</h1>
+      <h3 id="result1"></h3>
+      <h3 id="result2"></h3>
+      <h4 style="color: red">Note: Go to Console to view this result</h4>
+    </center>
+
+    <script>
+      /*
+      // Method 1
+      var userInput = prompt("Enter Your Letter");
+      userInput = userInput.toLocaleLowerCase();
+
+      if (
+        userInput == "a" ||
+        userInput == "e" ||
+        userInput == "i" ||
+        userInput == "o" ||
+        userInput == "u"
+      ) {
+        console.log(`Your Letter "${userInput}" is a Vowel`);
+      } else {
+        console.log(`"${userInput}" is not a Vowel`);
+      } 
+    */
+
+      // Method 2
+      var userInput = prompt("Enter Your Letter");
+      const vowelList = ["a", "e", "i", "o", "u"];
+      const countVowel = (el) => {
+        var count = 0;
+        for (let toufik of el.toLowerCase()) {
+          if (vowelList.includes(toufik)) {
+            count++;
+          }
+        }
+        return count;
+      };
+
+      console.log(countVowel(userInput));
+    </script>
+  </body>
+</html>

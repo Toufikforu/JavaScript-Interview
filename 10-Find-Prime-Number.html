@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Prime Number | Javascript</title>
+  </head>
+  <body>
+    <center>
+      <h1 style="color: purple">Find Prime Number| Javascript</h1>
+      <h3 id="result1"></h3>
+      <h3 id="result2"></h3>
+      <h4 style="color: red">Note: Go to Console to view this result</h4>
+    </center>
+
+    <script>
+      var userInput = prompt("Enter Your number");
+
+      if (userInput == 1) {
+        console.log(`${userInput} is not prime neither composite number`);
+      } else if (userInput < 1) {
+        console.log(`Prime number of ${userInput} is not possible`);
+      } else {
+        for (let i = 2; i < userInput; i++) {
+          if (userInput % i == 0) {
+            var result = `${userInput} is not prime number`;
+          } else {
+            var result = `${userInput} is prime number`;
+          }
+        }
+        console.log(result);
+      }
+    </script>
+  </body>
+</html>
