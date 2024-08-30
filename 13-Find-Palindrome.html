@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Palindrome Word | Javascript</title>
+  </head>
+  <body>
+    <script>
+      var userInput = prompt("Enter Your Palindrome word");
+      userInput = userInput.toLocaleLowerCase();
+
+      const findPalindrome = (tou) => {
+        var reverseuserInput = tou.split("").reverse().join("");
+        if (reverseuserInput === tou) {
+          return true;
+        } else {
+          return false;
+        }
+      };
+
+      console.log(findPalindrome(userInput));
+    </script>
+  </body>
+</html>
