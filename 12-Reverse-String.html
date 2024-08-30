@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse a String | Javascript</title>
+  </head>
+  <body>
+    <script>
+      const userInput = prompt("Enter Your words to reverse");
+
+      const reverseWord = (tou) => {
+        var strToArray = tou.split("");
+        var strRevarse = strToArray.reverse();
+        var strRevarse = strRevarse.join("");
+        return strRevarse;
+      };
+      console.log(reverseWord(userInput));
+    </script>
+  </body>
+</html>
