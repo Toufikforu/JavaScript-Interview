@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marge Two Array | Javascript</title>
+  </head>
+  <body>
+    <center>
+      <h1 style="color: purple">Marge Two Array | Javascript</h1>
+      <h3 id="result1"></h3>
+      <h3 id="result2"></h3>
+      <h4 style="color: red">Note: Go to Console to view this result</h4>
+    </center>
+    <script>
+      const arrList1 = [10, 20, 30, 40, 50];
+      const arrList2 = [5, 15, 25, 35, 45];
+      // Concat
+      const margeList = arrList1.concat(arrList2);
+      // Sort List
+      const sortList = margeList.sort(function (x, y) {
+        return x - y;
+      });
+      document.getElementById(
+        "result1"
+      ).innerHTML = `List1: ${arrList1} and List2: ${arrList2}`;
+      document.getElementById("result2").innerHTML =
+        "Marge & Sort Result: " + sortList;
+      console.log(sortList);
+    </script>
+  </body>
+</html>
