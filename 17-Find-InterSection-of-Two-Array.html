@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find intersection of Two Array | Javascript</title>
+  </head>
+  <body>
+    <script>
+      var arrList1 = [5, 10, 15, 20, 25, 30];
+      var arrList2 = [15, 5, 10, 13, 18, 22, 30];
+
+      let intersectionList = arrList1.filter((tou) => {
+        return arrList2.includes(tou);
+      });
+      console.log(intersectionList);
+    </script>
+  </body>
+</html>
